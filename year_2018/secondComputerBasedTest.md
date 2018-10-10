@@ -112,45 +112,45 @@ int main(){
 #include <math.h>
 
 void sortA(int *a, int n){
-	for(int i=0;i<n-1;i++){
-		for(int j=0;j<n-i-1;j++){
-			if (a[j]>a[j+1])
-			{
-				int t=a[j];
-				a[j]=a[j+1];
-				a[j+1]=t;
-			}
-		}
+  for(int i=0;i<n-1;i++){
+    for(int j=0;j<n-i-1;j++){
+        if (a[j]>a[j+1])
+	{
+	  int t=a[j];
+	  a[j]=a[j+1];
+	  a[j+1]=t;
 	}
+    }
+  }
 }
 
 int check(int a[],int n){
-	int i;
-	int b[n];
-	if (n==1)
-	{
-		printf("yes\n");
-		return 0;
-	}else{
-		for(i=0;i<n-1;i++)
-			b[i]=fabs(a[i]-a[i+1]);
-		sortA(b,n);
-		for(i=0;i<n-2;i++)
-		{
-			if (b[i+1]-b[i]==1)
-				continue;
-			else break;
-		}
-		if (i==n-2) printf("yes\n");
-		else printf("no\n");
-	}
-	return 0;
+  int i;
+  int b[n];
+  if (n==1)
+  {
+    printf("yes\n");
+    return 0;
+  }else{
+    for(i=0;i<n-1;i++)
+    b[i]=fabs(a[i]-a[i+1]);
+    sortA(b,n);
+    for(i=0;i<n-2;i++)
+    {
+       if (b[i+1]-b[i]==1)
+         continue;
+       else break;
+     }
+     if (i==n-2) printf("yes\n");
+     else printf("no\n");
+   }
+   return 0;
 }
 
 int main(){
-	int array[]={4,8,10,7,6,11};
-	check(array,6);
-	return 0;
+  int array[]={4,8,10,7,6,11};
+  check(array,6);
+  return 0;
 }
 ```
 
