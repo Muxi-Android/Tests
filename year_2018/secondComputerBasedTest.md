@@ -70,7 +70,7 @@ int main(){
 写一个函数（可以调用其它函数）参数为一个数组，和其长度，把这个数组中可能为主元的结果用printf输出
 比如上面的，数组{1、3、2、4、5},则输出1,4,5
 
-````
+```
   void findPrincipalElement(int array[],int length){
     .....
     .....
